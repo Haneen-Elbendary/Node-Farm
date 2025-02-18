@@ -81,6 +81,10 @@ const replaceTemplate = (template, product) => {
 };
 ```
 
+## 📸 Demo Preview
+![home_page](https://github.com/user-attachments/assets/3321e15e-d14c-4ca9-876c-35f857687b77)
+![detail_page](https://github.com/user-attachments/assets/ccd532f7-ec2d-458d-b5d5-794f286bd5b4)
+
 ## 👩‍💻 Author
 
 **Haneen Elbendary** - Software Engineer, Node.js Developer
