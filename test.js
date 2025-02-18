@@ -11,3 +11,4 @@ const replaceTemplate = (template, product) => {
     output = template.replace(/{%NOT_ORGANIC%}/g, "not-organic");
   return output;
 };
+  

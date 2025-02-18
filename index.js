@@ -1,35 +1,3 @@
-//#######################FILES
-// read & write sync blocking
-// const fs = require("fs");
-// const text = fs.readFileSync("./starter/txt/input.txt", "utf-8");
-// console.log(text);
-// const textOut = `This is the new text \n ${text} ${Date()}`;
-// fs.writeFileSync("./starter/txt/output.txt", textOut);
-// console.log("The file is written");
-//#################################################################
-// read & write Async
-// read & write async non-blocking
-// const fs = require("fs");
-// fs.readFile("./starter/txt/start.txt", "utf-8", (err, data1) => {
-//   if (err) return console.log("🙀");
-//   console.log(data1);
-//      i made an error here i forgot to write the file extention 😒
-//   fs.readFile(`./starter/txt/${data1}.txt`, "utf-8", (err, data2) => {
-//     console.log(data2);
-//     fs.readFile(`./starter/txt/append.txt`, "utf-8", (err, data3) => {
-//       console.log(data3);
-//       fs.writeFile(
-//         "./starter/txt/final.txt",
-//         `${data2}\n ${data3}`,
-//         "utf-8",
-//         (err) => {
-//           console.log("The file has been written");
-//         }
-//       );
-//     });
-//   });
-// });
-// if we want to get the full year we must pass a date to date constructor
 //#################################################################
 //#######################SERVER
 // first get the module
@@ -71,17 +39,6 @@ const dataObjWithSlugs = dataObj.map((el, i) => {
   el.slug = slugs[i];
   return el;
 });
-// now we want to write this data in the data.json file
-// i commented this line bcz this line will make nodemon work without stop even if there is no changes happend && that bcz of the write function
-// ###############
-// 1. File Changes Triggering Infinite Restarts
-// File Watch Loops: If you're using fs.writeFileSync or fs.writeFile within your code, nodemon might be watching these files for changes, which can trigger an infinite restart loop. This is because nodemon detects changes in files and restarts the server every time those files are updated.
-// Solution: You can exclude specific directories (like the starter/txt/ folder) from being watched by nodemon.
-// ###############
-// fs.writeFileSync(
-//   "./starter/dev-data/data.json",
-//   JSON.stringify(dataObjWithSlugs)
-// );
 const server = http.createServer((req, res) => {
   // use the url module
   const { query, pathname } = url.parse(req.url, true);
