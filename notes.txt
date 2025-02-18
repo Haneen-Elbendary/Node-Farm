@@ -1,0 +1,4 @@
+//how to select 2 words at the same time in vs code.
+.prettierrc -> for prettier configuration.
+            -> prettier has documentation
+            -> it's json so don't support comments.
